@@ -17,7 +17,7 @@ The architecture follows the **Medallion Architecture** (Bronze, Silver, Gold la
 ### High-Level Architecture
 The solution moves data through three distinct layers, transforming it from raw CSV files into business-ready dimensions and facts.
 
-![Data Warehouse Schema](docs/DataWareHouse_Schema.png)
+![Data Warehouse Schema](docs/DataWareHouse.png)
 
 *[Figure 1: High-Level Architecture Overview]*
 
@@ -29,6 +29,31 @@ The visual representation below illustrates the data lineage from source systems
 *[Figure 2: ETL Data Flow]*
 
 ---
+
+## 📅 Project Management & Data Engineering Workflow
+
+To ensure a structured and professional development process, this project was managed using an **Agile-like Kanban Board** via **GitHub Projects**. This approach demonstrates the complete engineering lifecycle—from infrastructure setup to the final deployment of a production-ready Star Schema.
+
+### 🏗️ The Construction Roadmap
+The data warehouse build was divided into three distinct technical milestones, each tracked through individual **Issues** to maintain clear documentation and traceability:
+
+1.  **Infrastructure & Bronze Layer (Ingestion):** Initial environment setup, schema creation, and implementing high-performance `BULK INSERT` procedures for raw data ingestion.
+2.  **Silver Layer (Transformation & Cleansing):** Developing T-SQL logic for data deduplication, standardization of mixed source formats, and complex date handling to ensure data quality.
+3.  **Gold Layer (Star Schema Modeling):** Designing the final analytical tier with Surrogate Keys, implementing fact/dimension relationships, and developing data integrity validation scripts.
+
+### 🛠️ Strategic Organization:
+* **Custom Labels:** I utilized colored labels to categorize tasks by layer (`bronze-layer`, `silver-layer`, `gold-layer`) and task type (`sql-logic`, `data-quality`), making the engineering workflow easy to navigate.
+* **Status Tracking:**
+    * **Done:** Contains all completed ETL pipelines, DDL scripts, and modeling logic.
+    * **In Progress:** Dedicated to final documentation and performance refinements.
+    * **Backlog:** Used for planning future engineering enhancements such as Incremental Loading (Delta Loads) and ETL automation.
+
+<p align="center">
+  <img src="docs/github_project_board.png" width="100%" alt="GitHub Project Management Board">
+</p>
+
+> **Professional Insight:** By utilizing GitHub Projects for the construction phase, I demonstrate my ability to operate within a professional **Software Development Lifecycle (SDLC)**, ensuring that data infrastructure is built systematically and is ready for enterprise-scale operations.
+
 
 ## 🛠️ Tech Stack
 
